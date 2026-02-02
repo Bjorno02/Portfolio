@@ -12,7 +12,7 @@ const interests = [
 
 export default function About() {
     return (
-        <div id="about" className="relative z-10 min-h-screen flex items-center justify-center pt-16 px-4">
+        <div id="about" className="relative z-10 flex items-center justify-center py-24 px-4">
             {/* Card fades in and slides up when scrolled into view */}
             <motion.div
                 className="w-full max-w-5xl rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 border-4 border-[#C7984F]"
