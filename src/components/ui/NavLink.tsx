@@ -1,6 +1,7 @@
 interface NavLinkProps {
     children: React.ReactNode;
     href: string;
+    className?: string;
 }
 
 export default function NavLink({ children, href }: NavLinkProps) {
@@ -11,7 +12,7 @@ export default function NavLink({ children, href }: NavLinkProps) {
             if (targ !== null) {
                 targ.scrollIntoView({ behavior: "smooth" });
             }
-        }} hover: text-grey-500 transition-colors duration-200>
+        }} className: text-grey-500 transition-colors duration-200>
             {children}
         </a>
     );
