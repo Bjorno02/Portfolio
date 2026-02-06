@@ -1,4 +1,5 @@
 import NavLink from './ui/NavLink'
+import { useActiveSection } from '../hooks/useActiveSection'
 
 const leftLinks = [
     { label: 'Home', href: '#home' },
@@ -13,15 +14,47 @@ const rightLinks = [
 ];
 
 export default function Navbar() {
+    const activeSection = useActiveSection();
+
     return (
-        <nav className="fixed top-0 w-full bg-[#3B2A1A] text-[#F5F0EB] z-50 font-serif border-b-4 border-[#C7984F]">
+        <nav className="fixed top-0 w-full bg-[#3B2A1A] z-50 font-serif border-b-4 border-[#C7984F]">
             <div className="max-w-8xl mx-auto flex items-center justify-center px-6 py-5 divide-x divide-[#F5F0EB]/30">
+
+                {/* Left vine/leaf flourish */}
+                <svg className="w-24 h-10 flex-shrink-0" viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Main vine stem */}
+                    <path d="M170 22C150 22 140 13 120 15C100 17 90 22 70 20C55 18 38 24 20 21C12 20 6 22 3 22" stroke="#C7984F" strokeWidth="1.5" strokeLinecap="round"/>
+                    {/* Branch 1 - upper */}
+                    <path d="M135 14C130 10 125 9 122 11" stroke="#C7984F" strokeWidth="1" strokeLinecap="round" fill="none"/>
+                    {/* Branch 2 - lower */}
+                    <path d="M85 21C82 26 78 28 75 26" stroke="#C7984F" strokeWidth="1" strokeLinecap="round" fill="none"/>
+                    {/* Branch 3 - upper */}
+                    <path d="M48 19C45 14 41 12 38 14" stroke="#C7984F" strokeWidth="1" strokeLinecap="round" fill="none"/>
+                    {/* Leaf 1 - top right */}
+                    <path d="M130 11C126 4 119 2 115 7C120 4 125 7 128 12Z" fill="#C7984F" opacity="0.85"/>
+                    {/* Leaf 2 - top right small */}
+                    <path d="M138 12C136 7 132 6 130 9C133 7 135 9 137 13Z" fill="#C7984F" opacity="0.6"/>
+                    {/* Leaf 3 - bottom mid */}
+                    <path d="M80 23C77 31 70 33 65 29C70 31 75 28 78 23Z" fill="#C7984F" opacity="0.85"/>
+                    {/* Leaf 4 - bottom mid small */}
+                    <path d="M88 23C86 28 83 30 80 27C83 29 85 27 87 23Z" fill="#C7984F" opacity="0.6"/>
+                    {/* Leaf 5 - top left */}
+                    <path d="M43 17C40 9 33 7 28 11C33 8 38 11 41 17Z" fill="#C7984F" opacity="0.85"/>
+                    {/* Leaf 6 - top left small */}
+                    <path d="M50 17C48 12 45 10 42 13C45 11 47 13 49 17Z" fill="#C7984F" opacity="0.6"/>
+                    {/* Leaf 7 - near end */}
+                    <path d="M22 20C19 14 14 13 11 16C14 13 18 15 20 20Z" fill="#C7984F" opacity="0.7"/>
+                    {/* Small curl at end */}
+                    <path d="M3 22C1 19 2 15 6 13" stroke="#C7984F" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+                    {/* Dot at start */}
+                    <circle cx="170" cy="22" r="2" fill="#C7984F"/>
+                </svg>
 
                 {/* Left links */}
                 <ul className="flex-1 flex justify-end divide-x divide-[#F5F0EB]/30">
                     {leftLinks.map((item) => (
                         <li key={item.href} className="px-6">
-                            <NavLink href={item.href}>{item.label}</NavLink>
+                            <NavLink href={item.href} isActive={activeSection === item.href.slice(1)}>{item.label}</NavLink>
                         </li>
                     ))}
                 </ul>
@@ -49,10 +82,40 @@ export default function Navbar() {
                 <ul className="flex-1 flex justify-start divide-x divide-[#F5F0EB]/30">
                     {rightLinks.map((item) => (
                         <li key={item.href} className="px-6">
-                            <NavLink href={item.href}>{item.label}</NavLink>
+                            <NavLink href={item.href} isActive={activeSection === item.href.slice(1)}>{item.label}</NavLink>
                         </li>
                     ))}
                 </ul>
+
+                {/* Right vine/leaf flourish (mirrored) */}
+                <svg className="w-24 h-10 flex-shrink-0 scale-x-[-1]" viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Main vine stem */}
+                    <path d="M170 22C150 22 140 13 120 15C100 17 90 22 70 20C55 18 38 24 20 21C12 20 6 22 3 22" stroke="#C7984F" strokeWidth="1.5" strokeLinecap="round"/>
+                    {/* Branch 1 - upper */}
+                    <path d="M135 14C130 10 125 9 122 11" stroke="#C7984F" strokeWidth="1" strokeLinecap="round" fill="none"/>
+                    {/* Branch 2 - lower */}
+                    <path d="M85 21C82 26 78 28 75 26" stroke="#C7984F" strokeWidth="1" strokeLinecap="round" fill="none"/>
+                    {/* Branch 3 - upper */}
+                    <path d="M48 19C45 14 41 12 38 14" stroke="#C7984F" strokeWidth="1" strokeLinecap="round" fill="none"/>
+                    {/* Leaf 1 - top right */}
+                    <path d="M130 11C126 4 119 2 115 7C120 4 125 7 128 12Z" fill="#C7984F" opacity="0.85"/>
+                    {/* Leaf 2 - top right small */}
+                    <path d="M138 12C136 7 132 6 130 9C133 7 135 9 137 13Z" fill="#C7984F" opacity="0.6"/>
+                    {/* Leaf 3 - bottom mid */}
+                    <path d="M80 23C77 31 70 33 65 29C70 31 75 28 78 23Z" fill="#C7984F" opacity="0.85"/>
+                    {/* Leaf 4 - bottom mid small */}
+                    <path d="M88 23C86 28 83 30 80 27C83 29 85 27 87 23Z" fill="#C7984F" opacity="0.6"/>
+                    {/* Leaf 5 - top left */}
+                    <path d="M43 17C40 9 33 7 28 11C33 8 38 11 41 17Z" fill="#C7984F" opacity="0.85"/>
+                    {/* Leaf 6 - top left small */}
+                    <path d="M50 17C48 12 45 10 42 13C45 11 47 13 49 17Z" fill="#C7984F" opacity="0.6"/>
+                    {/* Leaf 7 - near end */}
+                    <path d="M22 20C19 14 14 13 11 16C14 13 18 15 20 20Z" fill="#C7984F" opacity="0.7"/>
+                    {/* Small curl at end */}
+                    <path d="M3 22C1 19 2 15 6 13" stroke="#C7984F" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+                    {/* Dot at start */}
+                    <circle cx="170" cy="22" r="2" fill="#C7984F"/>
+                </svg>
 
             </div>
         </nav>
