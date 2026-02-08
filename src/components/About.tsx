@@ -32,10 +32,10 @@ export default function About() {
 
                 <div className="bg-[#4A5E3A] text-[#F5F0EB] px-6 md:px-12 py-6 font-serif">
                     <h3 className="text-center text-3xl font-extrabold pb-4 mb-8 border-b-4 border-[#4A5E3A]">Personal Interests</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-lg mx-auto">
+                    <div className="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
                         {interests.map((interest, index) => (
                             <motion.span key={interest}
-                            className="bg-[#3B2A1A] border border-[#C7984F] rounded-full px-4 py-1.5 text-sm cursor-default text-center"
+                            className="bg-[#3B2A1A] border border-[#C7984F] rounded-full px-5 py-1.5 text-sm cursor-default whitespace-nowrap"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             whileHover={{ scale: 1.1, y: -3 }}

@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section id="home" className="relative w-full h-[500px] md:h-[745px] -mt-10">
+        <section id="home" className="relative w-full h-svh md:h-[745px] -mt-10 overflow-hidden">
             {/* Video Background */}
             <video
                 autoPlay
