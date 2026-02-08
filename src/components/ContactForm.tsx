@@ -72,7 +72,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-                <div className="bg-[#4E3828] text-[#F5F0EB] px-12 py-8 font-serif">
+                <div className="bg-[#4E3828] text-[#F5F0EB] px-6 md:px-12 py-8 font-serif">
                     <h2 className="text-center text-3xl font-extrabold pb-4 mb-8 border-b-4 border-[#4A5E3A]">Get in Touch</h2>
 
                     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">

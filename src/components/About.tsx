@@ -21,7 +21,7 @@ export default function About() {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
             >
 
-                <div className="bg-[#4E3828] text-[#F5F0EB] px-12 py-6 border-b-4 border-[#C7984F] font-serif leading-relaxed text-lg">
+                <div className="bg-[#4E3828] text-[#F5F0EB] px-6 md:px-12 py-6 border-b-4 border-[#C7984F] font-serif leading-relaxed text-base md:text-lg">
                     <h2 className="text-center text-3xl font-extrabold pb-4 mb-6 border-b-4 border-[#4A5E3A]">About Me</h2>
                     <div className="space-y-5 text-center">
                         <p>Hi! My name is Bjorn Shurdha; I'm a Fullstack Software Developer based out of Boston, MA. I graduated from BC in May 2025 with a degree in Computer Science, and I've since been using programming as the medium for my love of creative expression and problem solving.</p>
@@ -30,12 +30,12 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="bg-[#4A5E3A] text-[#F5F0EB] px-12 py-6 font-serif">
+                <div className="bg-[#4A5E3A] text-[#F5F0EB] px-6 md:px-12 py-6 font-serif">
                     <h3 className="text-center text-3xl font-extrabold pb-4 mb-8 border-b-4 border-[#4A5E3A]">Personal Interests</h3>
-                    <div className="flex flex-wrap justify-center gap-3">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-lg mx-auto">
                         {interests.map((interest, index) => (
                             <motion.span key={interest}
-                            className="bg-[#3B2A1A] border border-[#C7984F] rounded-full px-4 py-1.5 text-sm cursor-default"
+                            className="bg-[#3B2A1A] border border-[#C7984F] rounded-full px-4 py-1.5 text-sm cursor-default text-center"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             whileHover={{ scale: 1.1, y: -3 }}

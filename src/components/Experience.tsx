@@ -117,7 +117,7 @@ function TimelineDate({ date, progress, side }: {
     return (
         <motion.div
             style={{ opacity, x }}
-            className={`flex items-center ${side === 'left' ? 'justify-end pr-4' : 'justify-start pl-4'}`}
+            className={`hidden md:flex items-center ${side === 'left' ? 'justify-end pr-4' : 'justify-start pl-4'}`}
         >
             <p className="text-base font-serif font-bold text-[#3B2A1A] tracking-wide whitespace-nowrap">
                 {date}
@@ -197,12 +197,12 @@ export default function Experience() {
             <div className="relative max-w-5xl mx-auto">
                 {/* Timeline glow */}
                 <motion.div
-                    className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-10 bg-[#C7984F]/10 blur-lg rounded-full"
+                    className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-10 bg-[#C7984F]/10 blur-lg rounded-full"
                     style={{ clipPath: lineClip }}
                 />
                 {/* Timeline line — bordered gold channel */}
                 <motion.div
-                    className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-3 rounded-full border border-[#C7984F]/70 bg-gradient-to-r from-[#9A7B2F] via-[#F0D78C]/40 to-[#9A7B2F]"
+                    className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-3 rounded-full border border-[#C7984F]/70 bg-gradient-to-r from-[#9A7B2F] via-[#F0D78C]/40 to-[#9A7B2F]"
                     style={{ clipPath: lineClip }}
                 />
 
@@ -213,47 +213,59 @@ export default function Experience() {
                         return (
                             <div
                                 key={exp.title}
-                                className="grid grid-cols-[1fr_56px_1fr] items-center"
                                 style={{ zIndex: experiences.length - i }}
                             >
-                                {/* Left cell */}
-                                <div>
-                                    {isLeft ? (
-                                        <TimelineCard
-                                            exp={exp}
-                                            progress={progresses[i]}
-                                            offset={STACK_OFFSETS[i]}
-                                        />
-                                    ) : (
-                                        <TimelineDate
-                                            date={exp.date}
-                                            progress={progresses[i]}
-                                            side="left"
-                                        />
-                                    )}
+                                {/* Mobile: stacked card with date */}
+                                <div className="md:hidden">
+                                    <p className="text-sm font-serif font-bold text-[#3B2A1A] mb-2 text-center">{exp.date}</p>
+                                    <TimelineCard
+                                        exp={exp}
+                                        progress={progresses[i]}
+                                        offset={STACK_OFFSETS[i]}
+                                    />
                                 </div>
 
-                                {/* Center: dot + connector */}
-                                <TimelineNode
-                                    progress={progresses[i]}
-                                    side={isLeft ? 'left' : 'right'}
-                                />
+                                {/* Desktop: 3-column timeline */}
+                                <div className="hidden md:grid grid-cols-[1fr_56px_1fr] items-center">
+                                    {/* Left cell */}
+                                    <div>
+                                        {isLeft ? (
+                                            <TimelineCard
+                                                exp={exp}
+                                                progress={progresses[i]}
+                                                offset={STACK_OFFSETS[i]}
+                                            />
+                                        ) : (
+                                            <TimelineDate
+                                                date={exp.date}
+                                                progress={progresses[i]}
+                                                side="left"
+                                            />
+                                        )}
+                                    </div>
 
-                                {/* Right cell */}
-                                <div>
-                                    {!isLeft ? (
-                                        <TimelineCard
-                                            exp={exp}
-                                            progress={progresses[i]}
-                                            offset={STACK_OFFSETS[i]}
-                                        />
-                                    ) : (
-                                        <TimelineDate
-                                            date={exp.date}
-                                            progress={progresses[i]}
-                                            side="right"
-                                        />
-                                    )}
+                                    {/* Center: dot + connector */}
+                                    <TimelineNode
+                                        progress={progresses[i]}
+                                        side={isLeft ? 'left' : 'right'}
+                                    />
+
+                                    {/* Right cell */}
+                                    <div>
+                                        {!isLeft ? (
+                                            <TimelineCard
+                                                exp={exp}
+                                                progress={progresses[i]}
+                                                offset={STACK_OFFSETS[i]}
+                                            />
+                                        ) : (
+                                            <TimelineDate
+                                                date={exp.date}
+                                                progress={progresses[i]}
+                                                side="right"
+                                            />
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         );

@@ -99,7 +99,7 @@ export default function Projects() {
 
                                 <SitePreview url={project.url} title={project.title} image={'image' in project ? project.image : undefined} />
 
-                                <div className="flex-1 text-center text-sm leading-relaxed border-t-4 border-[#C7984F] bg-[#4A5E3A] text-[#F5F0EB] px-12 py-6 font-serif">
+                                <div className="flex-1 text-center text-sm leading-relaxed border-t-4 border-[#C7984F] bg-[#4A5E3A] text-[#F5F0EB] px-6 md:px-12 py-6 font-serif">
                                     <h3 className="py-2 border-b-4 border-[#C7984F]">{project.title}</h3>
                                     <p className="pt-4">{project.description}</p>
                                 </div>
