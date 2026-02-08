@@ -31,7 +31,7 @@ export default function About() {
                 </div>
 
                 <div className="bg-[#4A5E3A] text-[#F5F0EB] px-6 md:px-12 py-6 font-serif">
-                    <h3 className="text-center text-3xl font-extrabold pb-4 mb-8 border-b-4 border-[#4A5E3A]">Personal Interests</h3>
+                    <h3 className="text-center text-3xl font-extrabold pb-4 mb-2 border-b-4 border-[#4A5E3A]">Personal Interests</h3>
                     <div className="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
                         {interests.map((interest, index) => (
                             <motion.span key={interest}
