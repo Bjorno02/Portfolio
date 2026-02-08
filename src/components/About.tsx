@@ -22,7 +22,7 @@ export default function About() {
             >
 
                 <div className="bg-[#4E3828] text-[#F5F0EB] px-12 py-6 border-b-4 border-[#C7984F] font-serif leading-relaxed text-lg">
-                    <h2 className="text-center text-xl font-bold pb-2 mb-6 border-b-4 border-[#C7984F]">About Me</h2>
+                    <h2 className="text-center text-3xl font-extrabold pb-4 mb-6 border-b-4 border-[#4A5E3A]">About Me</h2>
                     <div className="space-y-5 text-center">
                         <p>Hi! My name is Bjorn Shurdha; I'm a Fullstack Software Developer based out of Boston, MA. I graduated from BC in May 2025 with a degree in Computer Science, and I've since been using programming as the medium for my love of creative expression and problem solving.</p>
                         <p>My jiu-jitsu team had an extremely mediocre website, and I knew I could make a much better product. I took it on knowing very little about web development, and quickly learned the skills needed to launch the site. I received high praise in the community, and as a result, landed my two current gigs in contract software development.</p>
@@ -31,7 +31,7 @@ export default function About() {
                 </div>
 
                 <div className="bg-[#4A5E3A] text-[#F5F0EB] px-12 py-6 font-serif">
-                    <h3 className="text-center text-xl font-bold pb-2 mb-8 border-b-4 border-[#C7984F]">Personal Interests</h3>
+                    <h3 className="text-center text-3xl font-extrabold pb-4 mb-8 border-b-4 border-[#4A5E3A]">Personal Interests</h3>
                     <div className="flex flex-wrap justify-center gap-3">
                         {interests.map((interest, index) => (
                             <motion.span key={interest}

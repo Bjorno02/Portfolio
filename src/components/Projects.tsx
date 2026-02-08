@@ -10,9 +10,8 @@ const projects = [
     },
     {
         title: 'Long Barn Hay',
-        url: 'https://github.com/Bjorno02/Long-Barn-Hay',
-        description: 'Long Barn Hay, dropping very soon.',
-        image: '/screenshots/longbarnhay.png',
+        url: 'https://longbarnhay.com',
+        description: 'Website for Long Barn Hay, a hay business out of Chester, NH owned by Brendon Marrote.',
     },
     {
         title: 'BST Jiu Jitsu',
@@ -78,7 +77,7 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-                <h2 className="text-center text-4xl font-extrabold pb-12 border-b-4 font-serif border-[#8FAE7E] text-[#3B2A1A] mb-10">Projects</h2>
+                <h2 className="text-center text-4xl font-extrabold pb-12 border-b-4 font-serif border-[#4A5E3A] text-[#3B2A1A] mb-10">Projects</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (

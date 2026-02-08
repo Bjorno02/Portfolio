@@ -27,7 +27,7 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-                <h2 className="text-center text-4xl font-extrabold pb-12 border-b-4 font-serif border-[#8FAE7E] text-[#3B2A1A] mb-10">Skills and Technologies</h2>
+                <h2 className="text-center text-4xl font-extrabold pb-12 border-b-4 font-serif border-[#4A5E3A] text-[#3B2A1A] mb-10">Skills and Technologies</h2>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                     {skills.map((skill, index) => (

@@ -23,6 +23,7 @@ function App() {
         <Projects />
       </div>
       <Experience />
+      <div className="h-3 bg-gradient-to-r from-[#3B2A1A] via-[#C7984F] to-[#3B2A1A]" />
       <Contact />
     </div>
   );
