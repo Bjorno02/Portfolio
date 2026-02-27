@@ -4,8 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 const projects = [
     {
         title: 'Combat Zone MMA',
-        url: 'https://github.com/Bjorno02/CombatZoneWebsite',
-        description: 'Combat Zone MMA for Calvin Kattar, dropping shortly after February 21st.',
+        url: 'https://czmma.com',
+        description: 'Website for Combat Zone MMA, an organization owned by UFC vet Calvin Kattar',
         image: '/screenshots/combatzone.png',
     },
     {
