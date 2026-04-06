@@ -34,6 +34,11 @@ body {
 ::-webkit-scrollbar-thumb { background: #C7984F; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #F0D78C; }
 
+/* Rotating conic-gradient border for skill tiles */
+@keyframes borderSpin {
+  to { transform: rotate(360deg); }
+}
+
 /* Hide cursor on mouse-pointer devices (custom cursor JS handles it) */
 @media (pointer: fine) {
   *, *::before, *::after { cursor: none !important; }
