@@ -1,6 +1,6 @@
 # Bjorn Shurdha - Portfolio
 
-Personal portfolio website showcasing my work as a software developer.
+Personal portfolio website showcasing my work as a software developer. Pretty simple, nothing much to explain. I love this portfolio, hope you do too.
 
 ## Tech Stack
 
@@ -8,7 +8,7 @@ Personal portfolio website showcasing my work as a software developer.
 - **TypeScript** - Type safety
 - **Vite** - Build tool
 - **Tailwind CSS 4** - Styling
-- **More TBD** - Various
+  
 
 ## Development
 
