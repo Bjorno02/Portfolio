@@ -272,7 +272,12 @@ export default function Navbar() {
                 onClick={(e) => {
                   e.preventDefault();
                   setMobileOpen(false);
-                  document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => {
+                    const target = document.querySelector(item.href);
+                    if (!target) return;
+                    const top = target.getBoundingClientRect().top + window.scrollY - 64;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                  }, 50);
                 }}
                 style={{
                   display: 'flex',
