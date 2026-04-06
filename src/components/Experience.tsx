@@ -83,18 +83,19 @@ function TimelineCard({ exp, progress, offset }: {
 
     return (
         <motion.div
-            style={{ x, y, rotate, scale, opacity }}
-            className="relative z-20 bg-gradient-to-br from-[#F5F0EB] to-[#E8DFD0] border-[3px] border-[#C7984F] rounded-xl shadow-[0_8px_32px_rgba(59,42,26,0.35),0_2px_8px_rgba(199,152,79,0.25)] px-7 py-6 font-serif text-[#3B2A1A] overflow-hidden before:absolute before:inset-0 before:rounded-xl before:shadow-[inset_0_2px_12px_rgba(199,152,79,0.15),inset_0_0_30px_rgba(139,115,85,0.1)] before:pointer-events-none will-change-transform"
+            style={{ x, y, rotate, scale, opacity, fontFamily: "'Cormorant Garamond', serif" }}
+            className="relative z-20 bg-gradient-to-br from-[#F5F0EB] to-[#E8DFD0] border-[3px] border-[#C7984F] rounded-xl shadow-[0_8px_32px_rgba(59,42,26,0.35),0_2px_8px_rgba(199,152,79,0.25)] px-7 py-6 text-[#3B2A1A] overflow-hidden before:absolute before:inset-0 before:rounded-xl before:shadow-[inset_0_2px_12px_rgba(199,152,79,0.15),inset_0_0_30px_rgba(139,115,85,0.1)] before:pointer-events-none will-change-transform"
         >
             {/* Gold accent stripe top */}
             <div className="absolute top-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#C7984F]/50 to-transparent" />
-            <h3 className="text-xl font-bold pb-2 border-b-2 border-[#C7984F]/60 relative">
+            <h3 className="text-xl font-bold pb-2 border-b-2 border-[#C7984F]/60 relative tracking-wide"
+                style={{ fontFamily: "'Playfair Display SC', serif", fontSize: '1.1rem' }}>
                 {exp.title}
             </h3>
-            <p className="text-sm text-[#8B7355] italic mt-2 relative">
+            <p className="text-sm text-[#8B7355] italic mt-2 relative" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 {exp.tech}
             </p>
-            <p className="text-sm text-[#3B2A1A]/80 mt-1 leading-relaxed relative">
+            <p className="text-sm text-[#3B2A1A]/80 mt-1 leading-relaxed relative" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 {exp.description}
             </p>
             {/* Gold accent stripe bottom */}
@@ -185,7 +186,8 @@ export default function Experience() {
             </svg>
 
             <motion.h2
-                className="relative text-center text-4xl font-extrabold pb-6 border-b-4 font-serif border-[#4A5E3A] text-[#3B2A1A] mb-16 mx-auto max-w-3xl"
+                className="relative text-center text-3xl md:text-4xl font-extrabold pb-6 border-b-4 border-[#4A5E3A] text-[#3B2A1A] mb-16 mx-auto max-w-3xl tracking-wide"
+                style={{ fontFamily: "'Playfair Display SC', serif" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
