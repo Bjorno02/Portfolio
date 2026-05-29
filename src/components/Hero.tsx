@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const NAME_1 = ['B', 'J', 'O', 'R', 'N'];
 const NAME_2 = ['S', 'H', 'U', 'R', 'D', 'H', 'A'];
-const SUBTITLE = 'Software Developer';
+const SUBTITLE = 'Software Producer';
 
 function useTypewriter(text: string, startDelay: number, speed = 52) {
   const [display, setDisplay] = useState('');

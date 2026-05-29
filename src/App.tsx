@@ -9,6 +9,21 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/ContactForm';
 import FloatingClouds from './components/FloatingClouds';
+import OlderProjects from './components/OlderProjects';
+
+// ─── Hash routing ─────────────────────────────────────────────
+
+function useRoute() {
+  const [route, setRoute] = useState(() =>
+    typeof window !== 'undefined' ? window.location.hash.replace(/^#/, '') : ''
+  );
+  useEffect(() => {
+    const onHashChange = () => setRoute(window.location.hash.replace(/^#/, ''));
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+  return route;
+}
 
 // ─── Custom Cursor ────────────────────────────────────────────
 
@@ -190,6 +205,18 @@ function PageCurtain() {
 // ─── App ──────────────────────────────────────────────────────
 
 function App() {
+  const route = useRoute();
+
+  if (route === 'archive') {
+    return (
+      <div className="min-h-screen text-black">
+        <PageCurtain />
+        <CustomCursor />
+        <OlderProjects />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen text-black">
       <PageCurtain />

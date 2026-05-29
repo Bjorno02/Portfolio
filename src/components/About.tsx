@@ -66,7 +66,7 @@ function MobileAbout() {
               About Me
             </h2>
             <div style={{ height: 2, marginBottom: 18, background:'linear-gradient(to right, #C7984F, rgba(199,152,79,0.2), transparent)' }}/>
-            <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'1rem', lineHeight: 1.8, color:'#0E0804' }}>
+            <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:'1.02rem', lineHeight: 1.8, color:'#2A1C0E', fontWeight: 500 }}>
               <p style={{ marginBottom: 14 }}>
                   Hi! My name is Bjorn Shurdha; I'm a Fullstack Software Developer currently doing part time work for Kalmus! I'm based out of Boston, MA and
                   I graduated from BC in May 2025 with a degree in Computer Science, and I've since been
@@ -78,10 +78,12 @@ function MobileAbout() {
                 <div style={{ flex:1, height:1, background:'linear-gradient(to left, rgba(199,152,79,0.35), transparent)' }}/>
               </div>
               <p>
-              From nothing to deployment, I've handled CombatZone MMA (owned by former UFC contender
-                  Calvin Kattar), Long Barn Hay (Chester, NH), and more. Working hands-on with clients has
-                  made me excel at translating user requirements into real, digital products people actually
-                  want to look at.
+                  I've built Fitore, a multi-tenant SaaS that gives combat sports gyms one spot to handle
+                  scheduling, memberships, and billing. From nothing to deployment, I've also shipped sites
+                  for CombatZone MMA (owned by former UFC contender Calvin Kattar, live and pulling around
+                  3,000 peak viewers), Long Barn Hay (Chester, NH), and more. Working hands-on with clients
+                  has made me excel at translating user requirements into real, digital products people
+                  actually want to look at.
               </p>
             </div>
           </div>
@@ -251,7 +253,7 @@ function DesktopAbout() {
                   transition={{ duration:0.7, delay:0.7 }}/>
               </div>
 
-              <div style={{ padding:'20px 24px 16px', fontFamily:"'Cormorant Garamond', serif", fontSize:'1.05rem', lineHeight:1.88, color:'#0E0804' }}>
+              <div style={{ padding:'20px 24px 16px', fontFamily:"'Cormorant Garamond', serif", fontSize:'1.08rem', lineHeight:1.88, color:'#2A1C0E', fontWeight: 500 }}>
                 <div style={{ overflow:'hidden', marginBottom:16 }}>
                   <span aria-hidden="true" style={{ float:'left', marginRight:8, fontFamily:"'Cinzel Decorative', serif", fontSize:'5rem', lineHeight:0.78, color:'#C7984F', fontWeight:700, paddingTop:'0.03em', filter:'drop-shadow(0 2px 10px rgba(199,152,79,0.5))' }}>H</span>
                   i! My name is Bjorn Shurdha; I'm a Fullstack Software Developer currently doing part time work for Kalmus! I'm based out of Boston, MA and
@@ -275,10 +277,12 @@ function DesktopAbout() {
                   <div style={{ flex:1, height:1, background:'linear-gradient(to left, rgba(199,152,79,0.4), transparent)' }}/>
                 </div>
                 <p>
-                  From nothing to deployment, I've handled CombatZone MMA (owned by former UFC contender
-                  Calvin Kattar), Long Barn Hay (Chester, NH), and more. Working hands-on with clients has
-                  made me excel at translating user requirements into real, digital products people actually
-                  want to look at.
+                  I've built Fitore, a multi-tenant SaaS that gives combat sports gyms one spot to handle
+                  scheduling, memberships, and billing. From nothing to deployment, I've also shipped sites
+                  for CombatZone MMA (owned by former UFC contender Calvin Kattar, live and pulling around
+                  3,000 peak viewers), Long Barn Hay (Chester, NH), and more. Working hands-on with clients
+                  has made me excel at translating user requirements into real, digital products people
+                  actually want to look at.
                 </p>
                 <div style={{ marginTop:16, display:'flex', alignItems:'center', gap:10 }}>
                   <div style={{ flex:1, height:1, background:'linear-gradient(to right, transparent, rgba(139,103,59,0.25))' }}/>
